@@ -17,6 +17,7 @@ public class WorkerSelection : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main;
+        
     }
 
     void Update()

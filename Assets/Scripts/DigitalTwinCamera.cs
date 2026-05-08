@@ -137,10 +137,7 @@ public class DigitalTwinCamera : MonoBehaviour
         transform.rotation =
             targetRotation;
 
-        Invoke(
-    nameof(InitializeSelectedWorker),
-    0.2f
-);
+ 
     }
 
     void Update()
@@ -159,27 +156,7 @@ public class DigitalTwinCamera : MonoBehaviour
 
         HandleAutoView();
     }
-    void InitializeSelectedWorker()
-    {
-        if (WorkerSelection.Instance == null)
-            return;
-
-        if (WorkerSelection.Instance.selectedWorker == null)
-            return;
-
-        followTarget =
-            WorkerSelection.Instance.selectedWorker;
-
-        workerFocusTransition = true;
-
-        currentMode =
-            CameraViewMode.FreeCam;
-
-        isFollowingWorker = true;
-
-        currentZoomZ =
-            focusedZoom;
-    }
+   
     void HandleAutoView()
     {
         if (!isAutoViewing)
@@ -397,16 +374,17 @@ public class DigitalTwinCamera : MonoBehaviour
 
     void HandleWorkerFocus()
     {
+
         if (WorkerSelection.Instance == null)
             return;
 
         if (WorkerSelection.Instance.selectedWorker == null)
             return;
 
-        if (workerInitialized &&
-    followTarget ==
-    WorkerSelection.Instance.selectedWorker)
-            return;
+    //    if (workerInitialized &&
+    //followTarget ==
+    //WorkerSelection.Instance.selectedWorker)
+    //        return;
 
         followTarget =
             WorkerSelection.Instance.selectedWorker;
