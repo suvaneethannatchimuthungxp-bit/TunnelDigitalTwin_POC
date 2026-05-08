@@ -1,7 +1,17 @@
 using UnityEngine;
 
+public enum CameraViewMode
+{
+    TopView,
+    CCTVView,
+    AutoView,
+    FreeCam
+    
+}
 public class DigitalTwinCamera : MonoBehaviour
 {
+    [Header("UI")]
+    public CameraUIManager cameraUIManager;
     [Header("Movement")]
     public float moveSpeed = 12f;
 
@@ -45,6 +55,18 @@ public class DigitalTwinCamera : MonoBehaviour
 
     public float focusTransitionSpeed = 4f;
 
+    [Header("Camera Modes")]
+    public CameraViewMode currentMode;
+
+    [Header("Mode Targets")]
+    public Transform topViewTarget;
+
+    public Transform cctvViewTarget;
+
+    public Transform AutoLookTarget;
+
+    public Transform freeCameLook;
+
     // CAMERA
     private Camera cam;
 
@@ -69,6 +91,18 @@ public class DigitalTwinCamera : MonoBehaviour
     private Transform followTarget;
 
     private bool isFollowingWorker;
+    private bool workerFocusTransition;
+    private bool lockFixedHeight = false;
+
+    [Header("Auto View")]
+    public Transform[] autoViewPoints;
+
+    public float autoViewMoveSpeed = 2f;
+
+    public float autoViewWaitTime = 2f;
+
+    private int currentAutoPoint;
+    private bool isAutoViewing;
 
     void Start()
     {
@@ -116,14 +150,64 @@ public class DigitalTwinCamera : MonoBehaviour
         FollowWorker();
 
         ApplyCamera();
+
+        HandleAutoView();
     }
 
+    void HandleAutoView()
+    {
+        if (!isAutoViewing)
+            return;
+
+        if (autoViewPoints.Length == 0)
+            return;
+
+        Transform target =
+            autoViewPoints[currentAutoPoint];
+
+        // MOVE
+        targetPosition =
+            Vector3.Lerp(
+                targetPosition,
+                target.position,
+                autoViewMoveSpeed *
+                Time.deltaTime
+            );
+
+        // ROTATE
+        targetYaw =
+            Mathf.LerpAngle(
+                targetYaw,
+                target.eulerAngles.y,
+                autoViewMoveSpeed *
+                Time.deltaTime
+            );
+
+        // REACHED
+        float distance =
+            Vector3.Distance(
+                transform.position,
+                target.position
+            );
+
+        if (distance < 1f)
+        {
+            currentAutoPoint++;
+
+            if (currentAutoPoint >= autoViewPoints.Length)
+            {
+                currentAutoPoint = 0;
+            }
+        }
+    }
     // =====================================================
     // MOVEMENT
     // =====================================================
 
     void HandleMovement()
     {
+        if (currentMode != CameraViewMode.FreeCam)
+            return;
         // EXIT FOCUS
         if (Input.GetKey(KeyCode.W) ||
             Input.GetKey(KeyCode.A) ||
@@ -195,6 +279,8 @@ public class DigitalTwinCamera : MonoBehaviour
 
     void HandleRotation()
     {
+        //if (currentMode != CameraViewMode.FreeCam)
+        //    return;
         // EXIT FOLLOW
         if (Input.GetMouseButton(1))
         {
@@ -251,6 +337,8 @@ public class DigitalTwinCamera : MonoBehaviour
 
     void HandleZoom()
     {
+        if (currentMode != CameraViewMode.FreeCam)
+            return;
         float scroll =
             Input.GetAxis(
                 "Mouse ScrollWheel"
@@ -292,6 +380,7 @@ public class DigitalTwinCamera : MonoBehaviour
         followTarget =
             WorkerSelection.Instance.selectedWorker;
 
+        workerFocusTransition = true;
         isFollowingWorker = true;
 
         // REFINED ZOOM
@@ -304,6 +393,8 @@ public class DigitalTwinCamera : MonoBehaviour
 
     void FollowWorker()
     {
+        if (!workerFocusTransition)
+            return;
         if (!isFollowingWorker)
             return;
 
@@ -372,6 +463,24 @@ public class DigitalTwinCamera : MonoBehaviour
                     0
                 );
         }
+
+        float distance =
+    Vector3.Distance(
+        transform.position,
+        desiredPosition
+    );
+
+        if (distance < 1.5f)
+        {
+            workerFocusTransition = false;
+
+            currentMode =
+                CameraViewMode.FreeCam;
+
+            lockFixedHeight = true;
+
+            cameraUIManager.SelectFreeCam();
+        }
     }
 
     // =====================================================
@@ -381,8 +490,11 @@ public class DigitalTwinCamera : MonoBehaviour
     void ApplyCamera()
     {
         // FIX HEIGHT
-        targetPosition.y =
-            fixedCameraY;
+        if (lockFixedHeight)
+        {
+            targetPosition.y =
+                fixedCameraY;
+        }
 
         // POSITION
         transform.position =
@@ -416,5 +528,99 @@ public class DigitalTwinCamera : MonoBehaviour
 
         cam.transform.localPosition =
             camLocal;
+    }
+
+
+    public void SwitchMode(CameraViewMode mode)
+    {
+        currentMode = mode;
+        isAutoViewing = false;
+        isFollowingWorker = false;
+
+        currentZoomZ = normalZoom;
+
+        switch (mode)
+        {
+            case CameraViewMode.TopView:
+
+                MoveToTarget(
+                    topViewTarget
+                );
+
+                break;
+
+            case CameraViewMode.CCTVView:
+
+                MoveToTarget(
+                    cctvViewTarget
+                );
+
+                break;
+
+            case CameraViewMode.AutoView:
+
+                StartAutoView();
+                MoveToTarget(
+                    AutoLookTarget
+                );
+
+                break;
+
+            case CameraViewMode.FreeCam:
+
+                MoveToTarget(
+                    freeCameLook
+                );
+
+                break;
+        }
+    }
+
+    void StartAutoView()
+    {
+        isAutoViewing = true;
+
+        currentAutoPoint = 0;
+    }
+    public void TopViewMode()
+    {
+        SwitchMode(
+            CameraViewMode.TopView
+        );
+    }
+
+    public void CCTVViewMode()
+    {
+        SwitchMode(
+            CameraViewMode.CCTVView
+        );
+    }
+
+    public void AutoLookMode()
+    {
+        SwitchMode(
+            CameraViewMode.AutoView
+        );
+    }
+
+    public void FreeCamMode()
+    {
+        lockFixedHeight = true;
+        SwitchMode(
+            CameraViewMode.FreeCam
+        );
+    }
+    void MoveToTarget(Transform target)
+    {
+        if (target == null)
+            return;
+
+        lockFixedHeight = false;
+
+        targetPosition =
+            target.position;
+
+        targetYaw =
+            target.eulerAngles.y;
     }
 }
