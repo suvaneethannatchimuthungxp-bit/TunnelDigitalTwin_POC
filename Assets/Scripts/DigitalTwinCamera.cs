@@ -105,6 +105,7 @@ public class DigitalTwinCamera : MonoBehaviour
     private int currentAutoPoint;
     private bool isAutoViewing;
 
+   
     void Start()
     {
         cam = Camera.main;
@@ -137,7 +138,7 @@ public class DigitalTwinCamera : MonoBehaviour
         transform.rotation =
             targetRotation;
 
- 
+       
     }
 
     void Update()
@@ -156,6 +157,7 @@ public class DigitalTwinCamera : MonoBehaviour
 
         HandleAutoView();
     }
+
    
     void HandleAutoView()
     {
