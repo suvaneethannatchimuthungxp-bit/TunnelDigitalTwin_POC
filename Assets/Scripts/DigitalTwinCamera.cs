@@ -170,12 +170,12 @@ public class DigitalTwinCamera : MonoBehaviour
 
         // MOVE
         targetPosition =
-            Vector3.Lerp(
-                targetPosition,
-                target.position,
-                autoViewMoveSpeed *
-                Time.deltaTime
-            );
+        Vector3.Lerp(
+            targetPosition,
+            target.position,
+            autoViewMoveSpeed *
+            Time.deltaTime
+        );
 
         // ROTATE
         targetYaw =
@@ -374,34 +374,32 @@ public class DigitalTwinCamera : MonoBehaviour
 
     void HandleWorkerFocus()
     {
-
         if (WorkerSelection.Instance == null)
             return;
 
         if (WorkerSelection.Instance.selectedWorker == null)
             return;
 
-    //    if (workerInitialized &&
-    //followTarget ==
-    //WorkerSelection.Instance.selectedWorker)
-    //        return;
-
+        // STORE SELECTED WORKER
         followTarget =
             WorkerSelection.Instance.selectedWorker;
 
+        // CLEAR SELECTION IMMEDIATELY
+        WorkerSelection.Instance.selectedWorker = null;
+
+        // START FOCUS
         workerInitialized = true;
 
         workerFocusTransition = true;
 
         currentMode =
             CameraViewMode.FreeCam;
-
+        cameraUIManager.SelectFreeCam();
         isFollowingWorker = true;
 
         currentZoomZ =
             focusedZoom;
     }
-
     void FollowWorker()
     {
         if (!workerFocusTransition)
@@ -428,15 +426,12 @@ public class DigitalTwinCamera : MonoBehaviour
                 -4
             );
 
-        // SMOOTH FOLLOW
         targetPosition =
-            Vector3.Lerp(
-                targetPosition,
-                desiredPosition,
-                focusTransitionSpeed *
-                Time.deltaTime
-            );
-
+       Vector3.Lerp(
+           targetPosition,
+           desiredPosition,
+           3f * Time.deltaTime
+       );
         // LOOK AT WORKER
         Vector3 direction =
             workerPos -
@@ -455,17 +450,11 @@ public class DigitalTwinCamera : MonoBehaviour
                 Mathf.LerpAngle(
                     targetYaw,
                     lookRotation.eulerAngles.y,
-                    focusTransitionSpeed *
-                    Time.deltaTime
+                    3f * Time.deltaTime
                 );
 
             rotationY =
-                Mathf.LerpAngle(
-                    rotationY,
-                    targetYaw,
-                    focusTransitionSpeed *
-                    Time.deltaTime
-                );
+                targetYaw;
 
             targetRotation =
                 Quaternion.Euler(
