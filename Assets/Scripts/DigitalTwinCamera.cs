@@ -93,6 +93,7 @@ public class DigitalTwinCamera : MonoBehaviour
     private bool isFollowingWorker;
     private bool workerFocusTransition;
     private bool lockFixedHeight = false;
+    private bool workerInitialized;
 
     [Header("Auto View")]
     public Transform[] autoViewPoints;
@@ -104,6 +105,7 @@ public class DigitalTwinCamera : MonoBehaviour
     private int currentAutoPoint;
     private bool isAutoViewing;
 
+   
     void Start()
     {
         cam = Camera.main;
@@ -135,6 +137,8 @@ public class DigitalTwinCamera : MonoBehaviour
 
         transform.rotation =
             targetRotation;
+
+       
     }
 
     void Update()
@@ -154,6 +158,7 @@ public class DigitalTwinCamera : MonoBehaviour
         HandleAutoView();
     }
 
+   
     void HandleAutoView()
     {
         if (!isAutoViewing)
@@ -167,12 +172,12 @@ public class DigitalTwinCamera : MonoBehaviour
 
         // MOVE
         targetPosition =
-            Vector3.Lerp(
-                targetPosition,
-                target.position,
-                autoViewMoveSpeed *
-                Time.deltaTime
-            );
+        Vector3.Lerp(
+            targetPosition,
+            target.position,
+            autoViewMoveSpeed *
+            Time.deltaTime
+        );
 
         // ROTATE
         targetYaw =
@@ -377,20 +382,26 @@ public class DigitalTwinCamera : MonoBehaviour
         if (WorkerSelection.Instance.selectedWorker == null)
             return;
 
+        // STORE SELECTED WORKER
         followTarget =
             WorkerSelection.Instance.selectedWorker;
 
+        // CLEAR SELECTION IMMEDIATELY
+        WorkerSelection.Instance.selectedWorker = null;
+
+        // START FOCUS
+        workerInitialized = true;
+
         workerFocusTransition = true;
+
+        currentMode =
+            CameraViewMode.FreeCam;
+        cameraUIManager.SelectFreeCam();
         isFollowingWorker = true;
 
-        // REFINED ZOOM
         currentZoomZ =
             focusedZoom;
-
-        WorkerSelection.Instance.selectedWorker =
-            null;
     }
-
     void FollowWorker()
     {
         if (!workerFocusTransition)
@@ -417,15 +428,12 @@ public class DigitalTwinCamera : MonoBehaviour
                 -4
             );
 
-        // SMOOTH FOLLOW
         targetPosition =
-            Vector3.Lerp(
-                targetPosition,
-                desiredPosition,
-                focusTransitionSpeed *
-                Time.deltaTime
-            );
-
+       Vector3.Lerp(
+           targetPosition,
+           desiredPosition,
+           3f * Time.deltaTime
+       );
         // LOOK AT WORKER
         Vector3 direction =
             workerPos -
@@ -444,17 +452,11 @@ public class DigitalTwinCamera : MonoBehaviour
                 Mathf.LerpAngle(
                     targetYaw,
                     lookRotation.eulerAngles.y,
-                    focusTransitionSpeed *
-                    Time.deltaTime
+                    3f * Time.deltaTime
                 );
 
             rotationY =
-                Mathf.LerpAngle(
-                    rotationY,
-                    targetYaw,
-                    focusTransitionSpeed *
-                    Time.deltaTime
-                );
+                targetYaw;
 
             targetRotation =
                 Quaternion.Euler(

@@ -65,6 +65,8 @@ public class WorkerViewMode : MonoBehaviour
     [Header("Analytics")]
     public RightPanelUI rightPanelUI;
 
+    [Header("Report")]
+    public BottomPanelUI bottomPanelUI;
     // ==================================================
     // START
     // ==================================================
@@ -144,6 +146,7 @@ public class WorkerViewMode : MonoBehaviour
     public void ShowAlertsMode()
     {
         rightPanelUI.HidePanel();
+        bottomPanelUI.HidePanel();
         StopAllCoroutines();
 
         StartCoroutine(
@@ -160,6 +163,17 @@ public class WorkerViewMode : MonoBehaviour
 
         // USE NORMAL OVERVIEW STATE
         ShowOverview();
+    }
+
+    public void ShowReportMode()
+    {
+        // SHOW RIGHT PANEL
+        rightPanelUI.ShowPanel();
+
+        // SHOW BOTTOM PANEL
+        bottomPanelUI.ShowPanel();
+
+       
     }
     // ==================================================
     // ALERTS TRANSITION
@@ -323,6 +337,7 @@ public class WorkerViewMode : MonoBehaviour
     public void ShowOverview()
     {
         rightPanelUI.ShowPanel();
+        bottomPanelUI.HidePanel();
         StopAllCoroutines();
 
         StartCoroutine(
@@ -413,6 +428,7 @@ public class WorkerViewMode : MonoBehaviour
     public void ShowWorkersMode()
     {
         rightPanelUI.HidePanel();
+        bottomPanelUI.HidePanel();
         StopAllCoroutines();
 
         StartCoroutine(
@@ -559,6 +575,7 @@ public class WorkerViewMode : MonoBehaviour
     public void ShowZonesMode()
     {
         rightPanelUI.HidePanel();
+        bottomPanelUI.HidePanel();
         StopAllCoroutines();
 
         StartCoroutine(
