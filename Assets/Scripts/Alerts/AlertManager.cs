@@ -13,6 +13,8 @@ public class AlertManager : MonoBehaviour
     [Header("Dashboard Alerts")]
     public ActiveAlertsUI activeAlertsUI;
 
+    public EventTimelineUI eventTimelineUI;
+
     private void Awake()
     {
         Instance = this;
@@ -23,8 +25,16 @@ public class AlertManager : MonoBehaviour
         // Top Popup Alert
         alertPanel.SetActive(true);
 
+
         alertText.text = message;
 
+        if (eventTimelineUI != null)
+        {
+            eventTimelineUI.AddEvent(
+                message,
+                Color.red
+            );
+        }
         // Dashboard Alert History
         if (activeAlertsUI != null)
         {
