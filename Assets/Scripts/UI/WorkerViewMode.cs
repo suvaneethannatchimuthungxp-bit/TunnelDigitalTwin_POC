@@ -51,7 +51,7 @@ public class WorkerViewMode : MonoBehaviour
     public float visibleZoneAlpha = 0.28f;
 
     [Header("Alerts")]
-    public Renderer[] alertWorkers;
+   // public Renderer[] alertWorkers;
 
     public Renderer restrictedZoneRenderer;
 
@@ -255,19 +255,19 @@ public class WorkerViewMode : MonoBehaviour
         }
 
         // RESET ALERT WORKERS
-        foreach (Renderer r in alertWorkers)
-        {
-            Material mat =
-                r.material;
+        //foreach (Renderer r in alertWorkers)
+        //{
+        //    Material mat =
+        //        r.material;
 
-            if (mat.HasProperty("_EmissionColor"))
-            {
-                mat.SetColor(
-                    "_EmissionColor",
-                    Color.black
-                );
-            }
-        }
+        //    if (mat.HasProperty("_EmissionColor"))
+        //    {
+        //        mat.SetColor(
+        //            "_EmissionColor",
+        //            Color.black
+        //        );
+        //    }
+        //}
 
         // SMOOTH TRANSITION
         while (time < transitionDuration)
@@ -305,26 +305,26 @@ public class WorkerViewMode : MonoBehaviour
             }
 
             // ALERT WORKER GLOW
-            foreach (Renderer r in alertWorkers)
-            {
-                Material mat =
-                    r.material;
+            //foreach (Renderer r in alertWorkers)
+            //{
+            //    Material mat =
+            //        r.material;
 
-                if (mat.HasProperty("_EmissionColor"))
-                {
-                    mat.EnableKeyword("_EMISSION");
+            //    if (mat.HasProperty("_EmissionColor"))
+            //    {
+            //        mat.EnableKeyword("_EMISSION");
 
-                    mat.SetColor(
-                        "_EmissionColor",
-                        Color.Lerp(
-                            Color.black,
-                            alertGlowColor *
-                            alertGlowIntensity,
-                            t
-                        )
-                    );
-                }
-            }
+            //        mat.SetColor(
+            //            "_EmissionColor",
+            //            Color.Lerp(
+            //                Color.black,
+            //                alertGlowColor *
+            //                alertGlowIntensity,
+            //                t
+            //            )
+            //        );
+            //    }
+            //}
 
             yield return null;
         }
