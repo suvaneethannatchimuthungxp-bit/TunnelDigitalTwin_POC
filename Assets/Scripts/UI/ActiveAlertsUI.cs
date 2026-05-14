@@ -36,12 +36,23 @@ public class ActiveAlertsUI : MonoBehaviour
     // Add New Alert
     public void AddAlert(string message)
     {
-        // Default Warning Color
-        Color alertColor =
-            new Color32(255, 176, 32, 255);
+        Color alertColor = Color.white;
 
-        // Idle = Red
-        if (message.ToLower().Contains("idle"))
+        // INFO
+        if (message.Contains("[INFO]"))
+        {
+            alertColor = Color.cyan;
+        }
+
+        // WARNING
+        else if (message.Contains("[WARNING]"))
+        {
+            alertColor =
+                new Color32(255, 176, 32, 255);
+        }
+
+        // CRITICAL
+        else if (message.Contains("[CRITICAL]"))
         {
             alertColor =
                 new Color32(255, 59, 48, 255);
@@ -61,9 +72,14 @@ public class ActiveAlertsUI : MonoBehaviour
 
     void UpdateUI()
     {
-        alertText1.text = alerts[0];
-        alertText2.text = alerts[1];
-        alertText3.text = alerts[2];
+        alertText1.text =
+            string.IsNullOrEmpty(alerts[0]) ? "" : alerts[0];
+
+        alertText2.text =
+            string.IsNullOrEmpty(alerts[1]) ? "" : alerts[1];
+
+        alertText3.text =
+            string.IsNullOrEmpty(alerts[2]) ? "" : alerts[2];
 
         alertIcon1.color = colors[0];
         alertIcon2.color = colors[1];
