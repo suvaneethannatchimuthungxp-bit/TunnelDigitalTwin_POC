@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayTimelineUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Replay\\ReplayTimelineUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\globalreplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\globalreplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\workers\\workerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\workers\\workerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\replaypaneltransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\replaypaneltransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Replay\\ReplayPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\globalreplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\globalreplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\replaytimelineui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\replaytimelineui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\replayframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\replayframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\ui\\eventtimelineui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\eventtimelineui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\WorkerFrameData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Replay\\WorkerFrameData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\alerts\\alertmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\alerts\\alertmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayFrame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Replay\\ReplayFrame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\workers\\workermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,6 +117,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\ui\\tbmtelemetryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\tbmtelemetryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity3d_projects\\tunneldigitaltwin_poc\\assets\\scripts\\replay\\workerframedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\replay\\workerframedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -123,41 +135,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReplayTimelineUI.cs",
-              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
-              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "HeatBrushFollower.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Heatmap\\HeatBrushFollower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T16:01:39.006Z",
+              "WhenOpened": "2026-05-16T13:31:46.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WorkerStatus.cs",
-              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerStatus.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Workers\\WorkerStatus.cs",
-              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerStatus.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Workers\\WorkerStatus.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAAwLQAAAAFAAAAAAAAAA==",
+              "Title": "ReplayPanelTransition.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayPanelTransition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\ReplayPanelTransition.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayPanelTransition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Replay\\ReplayPanelTransition.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwJIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:31:19.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T17:58:50.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WorkerFrameData.cs",
-              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\WorkerFrameData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\WorkerFrameData.cs",
-              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\WorkerFrameData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Replay\\WorkerFrameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ReplayTimelineUI.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Replay\\ReplayTimelineUI.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAApwG8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:03:57.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T16:01:39.006Z"
             },
             {
               "$type": "Document",
@@ -169,25 +179,23 @@
               "RelativeToolTip": "Assets\\Scripts\\Replay\\ReplayFrame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:03:35.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:03:35.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GlobalReplayManager.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\GlobalReplayManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\GlobalReplayManager.cs",
               "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\GlobalReplayManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Replay\\GlobalReplayManager.cs",
-              "ViewState": "AgIAAAEBAAAAAAAAAAAQwDIBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4BAAAAAAAAAAAuwM0BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:03:05.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:03:05.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ZoneDetector.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\ZoneDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ZoneDetector.cs",
@@ -199,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "TBMTelemetryUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\TBMTelemetryUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\TBMTelemetryUI.cs",
@@ -211,7 +219,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "WorkerStatus.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerStatus.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Workers\\WorkerStatus.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerStatus.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Workers\\WorkerStatus.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowLQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:31:19.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReplayPanelUI.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayPanelUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\ReplayPanelUI.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\ReplayPanelUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Replay\\ReplayPanelUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:42:21.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AlertManager.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Alerts\\AlertManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Alerts\\AlertManager.cs",
@@ -219,25 +252,35 @@
               "RelativeToolTip": "Assets\\Scripts\\Alerts\\AlertManager.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAAwGsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T09:25:48.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T09:25:48.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "EventTimelineUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\EventTimelineUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\EventTimelineUI.cs",
               "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\EventTimelineUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\EventTimelineUI.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwIgAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T15:58:51.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T15:58:51.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 29,
+              "Title": "WorkerFrameData.cs",
+              "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\WorkerFrameData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Replay\\WorkerFrameData.cs",
+              "ToolTip": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Replay\\WorkerFrameData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Replay\\WorkerFrameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:03:57.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "WorkerMovement.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Workers\\WorkerMovement.cs",
@@ -245,12 +288,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Workers\\WorkerMovement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T15:50:18.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T15:50:18.061Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WorkerLabelUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\WorkerLabelUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\WorkerLabelUI.cs",
@@ -262,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ActiveAlertsUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\ActiveAlertsUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ActiveAlertsUI.cs",
@@ -274,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "WorkerViewMode.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\WorkerViewMode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\WorkerViewMode.cs",
@@ -286,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "WorkerSelection.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\Workers\\WorkerSelection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Workers\\WorkerSelection.cs",
@@ -298,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ViewControlUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\ViewControlUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ViewControlUI.cs",
@@ -310,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "LeftPanelButtonSelection.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\LeftPanelButtonSelection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LeftPanelButtonSelection.cs",
@@ -322,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CameraUIManager.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\CameraUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\CameraUIManager.cs",
@@ -334,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "HelpPanelUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\HelpPanelUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\HelpPanelUI.cs",
@@ -346,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "MiniMapFollow.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\MiniMap\\MiniMapFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MiniMap\\MiniMapFollow.cs",
@@ -358,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "BottomPanelUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\BottomPanelUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\BottomPanelUI.cs",
@@ -370,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "RightPanelUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\RightPanelUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\RightPanelUI.cs",
@@ -382,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "WorkerDetailsUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\WorkerDetailsUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\WorkerDetailsUI.cs",
@@ -394,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "TopPanelUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\TopPanelUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\TopPanelUI.cs",
@@ -406,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "DashboardUIManager.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\DashboardUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\DashboardUIManager.cs",
@@ -418,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "DashboardMode.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\DashboardMode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\DashboardMode.cs",
@@ -430,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ProductivityUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\ProductivityUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ProductivityUI.cs",
@@ -442,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "ZoneBreakdownUI.cs",
               "DocumentMoniker": "D:\\Unity3D_Projects\\TunnelDigitalTwin_POC\\Assets\\Scripts\\UI\\ZoneBreakdownUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ZoneBreakdownUI.cs",
