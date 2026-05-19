@@ -35,6 +35,8 @@ public class WorkerStatus : MonoBehaviour
 
     private Animator animator;
 
+    public bool isReplayMode;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -43,6 +45,12 @@ public class WorkerStatus : MonoBehaviour
 
     void Update()
     {
+
+        if (isReplayMode)
+        {
+            agent.velocity = Vector3.zero;
+            return;
+        }
         // Update Zone Analytics
         UpdateZoneTimers();
 
@@ -155,7 +163,9 @@ public class WorkerStatus : MonoBehaviour
                     idleAlertTriggered = true;
 
                     AlertManager.Instance.ShowAlert(
-                        gameObject.name + " idle too long!"
+                        gameObject.name + " idle too long!",
+                         AlertSeverity.Info,
+                         this
                     );
 
                     Debug.Log(

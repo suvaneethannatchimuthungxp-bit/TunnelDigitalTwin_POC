@@ -31,7 +31,9 @@ public class ZoneDetector : MonoBehaviour
                         WorkerState.Restricted;
 
                     AlertManager.Instance.ShowAlert(
-                        other.name + " entered Restricted Zone!"
+                        other.name + " entered Restricted Zone!",
+                         AlertSeverity.Warning,
+                         workerStatus
                     );
                 }
 

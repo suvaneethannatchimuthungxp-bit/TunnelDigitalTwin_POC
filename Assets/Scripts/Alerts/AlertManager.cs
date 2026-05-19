@@ -1,6 +1,14 @@
 using UnityEngine;
 using TMPro;
 
+
+public enum AlertSeverity
+{
+    Info,
+    Warning,
+    Critical
+}
+
 public class AlertManager : MonoBehaviour
 {
     public static AlertManager Instance;
@@ -20,28 +28,94 @@ public class AlertManager : MonoBehaviour
         Instance = this;
     }
 
-    public void ShowAlert(string message)
+
+
+    public void ShowAlert(
+     string message,
+     AlertSeverity severity,
+     WorkerStatus workerStatus)
     {
-        // Top Popup Alert
+        // SHOW POPUP
+
         alertPanel.SetActive(true);
 
+        // MESSAGE
 
-        alertText.text = message;
+        alertText.text =
+            "[" + severity.ToString().ToUpper() + "]\n" + message;
 
+        // DEFAULT COLOR
+
+        Color alertColor = Color.white;
+
+        // SEVERITY COLORS
+
+        switch (severity)
+        {
+            case AlertSeverity.Info:
+
+                alertColor =
+                    Color.cyan;
+
+                break;
+
+            case AlertSeverity.Warning:
+
+                alertColor =
+                    new Color(1f, 0.6f, 0f);
+
+                break;
+
+            case AlertSeverity.Critical:
+
+                alertColor =
+                    Color.red;
+
+                break;
+        }
+
+        // APPLY COLOR
+
+        alertText.color =
+            alertColor;
+
+        // TIMELINE
+
+      
+        
+
+        // ACTIVE ALERTS
+
+        if (activeAlertsUI != null)
+        {
+            activeAlertsUI.AddAlert(
+                "[" + severity.ToString().ToUpper() + "] " + message
+            );
+        }
+
+        int replayIndex = -1;
+
+    //    if (ReplayManager.Instance != null &&
+    //        workerStatus != null)
+    //    {
+    //        replayIndex =
+    //            ReplayManager.Instance.RecordEvent(
+    //                message,
+    //                workerStatus.transform,
+    //                workerStatus.currentState.ToString()
+    //            );
+        
+    //}
         if (eventTimelineUI != null)
         {
             eventTimelineUI.AddEvent(
-                message,
-                Color.red
+                "[" + severity.ToString().ToUpper() + "] " + message,
+                alertColor,
+                replayIndex
             );
         }
-        // Dashboard Alert History
-        if (activeAlertsUI != null)
-        {
-            activeAlertsUI.AddAlert(message);
-        }
+        // RESET TIMER
 
-        // Reset Hide Timer
         CancelInvoke();
 
         Invoke(nameof(HideAlert), 3f);

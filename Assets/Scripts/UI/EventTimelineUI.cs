@@ -18,7 +18,8 @@ public class EventTimelineUI : MonoBehaviour
 
     public void AddEvent(
         string message,
-        Color color)
+        Color color,
+        int replayIndex)
     {
         GameObject obj =
             Instantiate(
@@ -33,16 +34,29 @@ public class EventTimelineUI : MonoBehaviour
         Image icon =
             obj.GetComponentInChildren<Image>();
 
+     //   Button replayButton =
+     //obj.transform
+     //.Find("ReplayIncidentButton")
+     //.GetComponent<Button>();
+
         // MESSAGE
-        texts[0].text = message;
+        texts[0].text =
+      "<b>" + message + "</b>";
 
         // TIME
         texts[1].text =
-            System.DateTime.Now
-            .ToString("hh:mm:ss tt");
+      "RECORDED : " +
+      System.DateTime.Now
+      .ToString("hh:mm:ss tt");
 
         // ICON COLOR
         icon.color = color;
+
+
+        //replayButton.onClick.AddListener(() =>
+        //{
+        //    ReplayReplayEvent(replayIndex);
+        //});
 
         // LIMIT EVENTS
         if (contentParent.childCount > maxEvents)
@@ -54,4 +68,71 @@ public class EventTimelineUI : MonoBehaviour
             );
         }
     }
+
+    //void ReplayReplayEvent(int index)
+    //{
+    //    if (index < 0 ||
+    //        index >= ReplayManager.Instance.replayEvents.Count)
+    //    {
+    //        return;
+    //    }
+
+    //    ReplayEvent replayEvent =
+    //        ReplayManager.Instance.replayEvents[index];
+
+       
+    //    GameObject workerObj =
+    //GameObject.Find(replayEvent.workerName);
+
+    //    if (workerObj != null)
+    //    {
+    //        StartCoroutine(
+    //            PlayReplayMovement(
+    //                workerObj.transform,
+    //                replayEvent
+    //            )
+    //        );
+    //    }
+    //    Debug.Log(
+    //        "REPLAYING INCIDENT : " +
+    //        replayEvent.eventMessage
+    //    );
+
+    //    Debug.Log(
+    //        "WORKER : " +
+    //        replayEvent.workerName
+    //    );
+
+    //    Debug.Log(
+    //        "POSITION : " +
+    //        replayEvent.workerPosition
+    //    );
+    //}
+
+    //System.Collections.IEnumerator PlayReplayMovement(
+    //Transform worker,
+    //ReplayEvent replayEvent)
+    //{
+    //    ReplayHighlighter highlighter =
+    //worker.GetComponent<ReplayHighlighter>();
+
+        //if (highlighter != null)
+        //{
+        //    highlighter.HighlightReplay();
+        //}
+        //if (replayEvent.recordedPositions.Count == 0)
+        //{
+        //    yield break;
+        //}
+
+    //    for (int i = 0;
+    //         i < replayEvent.recordedPositions.Count;
+    //         i++)
+    //    {
+    //        worker.position =
+    //            replayEvent.recordedPositions[i];
+
+    //        yield return new WaitForSeconds(0.08f);
+    //    }
+    //}
 }

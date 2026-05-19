@@ -1,25 +1,3 @@
-//using UnityEngine;
-//using TMPro;
-
-//public class WorkerLabelUI : MonoBehaviour
-//{
-//    public WorkerStatus workerStatus;
-
-//    public TMP_Text workerNameText;
-//    public TMP_Text workerStateText;
-
-//    void Update()
-//    {
-//        if (workerStatus != null)
-//        {
-//            workerNameText.text =
-//                workerStatus.gameObject.name;
-
-//            workerStateText.text =
-//                "● " + workerStatus.currentState.ToString();
-//        }
-//    }
-//}
 
 using UnityEngine;
 using TMPro;
@@ -31,6 +9,13 @@ public class WorkerLabelUI : MonoBehaviour
     public TMP_Text workerNameText;
 
     public TMP_Text workerStateText;
+
+
+    public TMP_Text chainageText;
+
+    public Transform worker;
+
+    public float baseChainage = 2000f;
 
     [Header("State Colors")]
     public Color workingColor =
@@ -52,7 +37,7 @@ public class WorkerLabelUI : MonoBehaviour
 
         // NAME
         workerNameText.text =
-            workerStatus.gameObject.name;
+           workerStatus.gameObject.name;
 
         // STATE
         WorkerState state =
@@ -60,6 +45,18 @@ public class WorkerLabelUI : MonoBehaviour
 
         workerStateText.text =
             "● " + state.ToString();
+
+        if (worker != null)
+        {
+            float distance = Mathf.Abs(worker.position.z);
+
+            float currentChainage = baseChainage + distance;
+
+            int km = Mathf.FloorToInt(currentChainage / 1000);
+            int meters = Mathf.FloorToInt(currentChainage % 1000);
+
+            chainageText.text = $"CH {km}+{meters:000}";
+        }
 
         // COLOR
         switch (state)
