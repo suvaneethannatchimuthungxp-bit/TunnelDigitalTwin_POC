@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TBMTelemetryUI : MonoBehaviour
 {
@@ -23,22 +24,55 @@ public class TBMTelemetryUI : MonoBehaviour
         Color.white;
 
     public Color activeColor =
-        Color.green;
+        new Color(0.2f, 1f, 0.7f, 1f);
 
     public Color warningColor =
-        new Color(1f, 0.6f, 0f);
+        new Color(1f, 0.7f, 0f, 1f);
 
     public Color criticalColor =
-        Color.red;
+        new Color(1f, 0.2f, 0.2f, 1f);
+
+    [Header("Premium Radial Colors")]
+
+    public Color rpmColor =
+        new Color(0.2f, 1f, 1f, 0.75f);
+
+    public Color pressureColor =
+        new Color(1f, 0.5f, 0.1f, 0.75f);
+
+    public Color speedColor =
+        new Color(0.3f, 1f, 0.5f, 0.75f);
+
+    [Header("Radial UI")]
+
+    public Image rpmRadialFill;
+
+    public Image pressureRadialFill;
+
+    public Image speedRadialFill;
+
+    [Header("Smooth Speed")]
+
+    public float smoothSpeed = 3f;
+
+    private float rpmTarget;
+
+    private float pressureTarget;
+
+    private float speedTarget;
 
     void Update()
     {
         SimulateTelemetry();
+
+        UpdateSmoothRadials();
     }
 
     void SimulateTelemetry()
     {
+        // =========================
         // LIVE MOCK VALUES
+        // =========================
 
         float advanceRate =
             10f + Mathf.PingPong(Time.time * 0.5f, 5f);
@@ -55,7 +89,22 @@ public class TBMTelemetryUI : MonoBehaviour
         float ringBuild =
             30f + Mathf.PingPong(Time.time * 0.2f, 10f);
 
+        // =========================
+        // TARGET FILLS
+        // =========================
+
+        rpmTarget =
+            rpm / 5f;
+
+        pressureTarget =
+            groutPressure / 3f;
+
+        speedTarget =
+            advanceRate / 15f;
+
+        // =========================
         // STATUS
+        // =========================
 
         statusText.text =
             "STATUS : ACTIVE";
@@ -63,7 +112,9 @@ public class TBMTelemetryUI : MonoBehaviour
         statusText.color =
             activeColor;
 
+        // =========================
         // ADVANCE RATE
+        // =========================
 
         advanceRateText.text =
             "ADVANCE RATE : " +
@@ -73,7 +124,9 @@ public class TBMTelemetryUI : MonoBehaviour
         advanceRateText.color =
             normalColor;
 
+        // =========================
         // RPM
+        // =========================
 
         rpmText.text =
             "CUTTER RPM : " +
@@ -82,7 +135,9 @@ public class TBMTelemetryUI : MonoBehaviour
         rpmText.color =
             normalColor;
 
+        // =========================
         // TORQUE
+        // =========================
 
         torqueText.text =
             "TORQUE : " +
@@ -92,7 +147,9 @@ public class TBMTelemetryUI : MonoBehaviour
         torqueText.color =
             normalColor;
 
+        // =========================
         // PRESSURE
+        // =========================
 
         groutPressureText.text =
             "GROUT PRESSURE : " +
@@ -102,7 +159,9 @@ public class TBMTelemetryUI : MonoBehaviour
         groutPressureText.color =
             normalColor;
 
+        // =========================
         // RING BUILD
+        // =========================
 
         ringBuildText.text =
             "RING BUILD TIME : " +
@@ -112,26 +171,82 @@ public class TBMTelemetryUI : MonoBehaviour
         ringBuildText.color =
             normalColor;
 
-        // WARNING
+        // =========================
+        // PREMIUM RADIAL COLORS
+        // =========================
+
+        rpmRadialFill.color =
+            rpmColor;
+
+        pressureRadialFill.color =
+            pressureColor;
+
+        speedRadialFill.color =
+            speedColor;
+
+        // =========================
+        // WARNING STATE
+        // =========================
 
         if (torque > 3100f)
         {
             torqueText.color =
                 warningColor;
+
+            pressureRadialFill.color =
+                warningColor;
+
+            statusText.text =
+                "STATUS : WARNING";
+
+            statusText.color =
+                warningColor;
         }
 
-        // CRITICAL
+        // =========================
+        // CRITICAL STATE
+        // =========================
 
         if (torque > 3250f)
         {
             torqueText.color =
                 criticalColor;
 
+            rpmRadialFill.color =
+                criticalColor;
+
+            pressureRadialFill.color =
+                criticalColor;
+
+            speedRadialFill.color =
+                criticalColor;
+
             statusText.text =
-                "STATUS : WARNING";
+                "STATUS : CRITICAL";
 
             statusText.color =
                 criticalColor;
         }
+    }
+
+    void UpdateSmoothRadials()
+    {
+        rpmRadialFill.fillAmount =
+            Mathf.Lerp(
+                rpmRadialFill.fillAmount,
+                rpmTarget,
+                Time.deltaTime * smoothSpeed);
+
+        pressureRadialFill.fillAmount =
+            Mathf.Lerp(
+                pressureRadialFill.fillAmount,
+                pressureTarget,
+                Time.deltaTime * smoothSpeed);
+
+        speedRadialFill.fillAmount =
+            Mathf.Lerp(
+                speedRadialFill.fillAmount,
+                speedTarget,
+                Time.deltaTime * smoothSpeed);
     }
 }

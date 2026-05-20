@@ -71,6 +71,11 @@ public class ThemeManager : MonoBehaviour
         ApplyThemeInstant();
 
         UpdateToggleInstant();
+        if (toggleText != null)
+        {
+            toggleText.text =
+                isDark ? "Dark" : "Light";
+        }
     }
 
     // ======================================================
@@ -90,7 +95,7 @@ public class ThemeManager : MonoBehaviour
         if (toggleText != null)
         {
             toggleText.text =
-                isDark ? "Night" : "Day";
+                isDark ? "Dark" : "Light";
         }
     }
 
