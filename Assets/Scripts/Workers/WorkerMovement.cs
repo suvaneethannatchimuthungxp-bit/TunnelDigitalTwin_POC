@@ -32,10 +32,13 @@ public class WorkerMovement : MonoBehaviour
             );
         }
 
-        // Smooth movement check
-        bool isMoving =
-            agent.velocity.magnitude > 0.15f;
+        //// Smooth movement check
+        //bool isMoving =
+        //    agent.velocity.magnitude > 0.15f;
 
-       
+        bool isMoving =
+agent.velocity.magnitude > 0.05f;
+
+
     }
 }
